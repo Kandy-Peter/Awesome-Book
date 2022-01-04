@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+body {
+  padding: 20px;
+}
+
+.bookItem {
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid rgb(99, 99, 99);
+  padding: 10px;
+  width: 40%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 200px;
+}
+
+form input {
+  margin: 0.5rem 0;
+  height: 30px;
+  padding: 5px;
+}
+
+#button {
+  width: 60px;
+}
