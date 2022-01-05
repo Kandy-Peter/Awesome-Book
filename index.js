@@ -20,20 +20,13 @@ class Book {
     const booksContainer = document.querySelector('.displayBook');
     newAddDiv.classList.add('bookItem');
     newAddDiv.id = book.id;
-    newAddDiv.innerHTML = `<ul class="book-content">
-                                
+    newAddDiv.innerHTML = `<ul class="book-content">   
                                 <li>${book.title}</li>
                                 <li>${book.author}</li>
                             </ul>
                             <button id="remove">Remove</button>
     `;
     booksContainer.appendChild(newAddDiv);
-  }
-
-  static getBook() {
-    bookArray.forEach((book) => {
-      Book.addNewBook(book);
-    });
   }
 
   static clearInputs() {
@@ -63,7 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
     bookArray = JSON.parse(localStorage.getItem('bookstore'));
     Book.lastID(bookArray);
   }
-  Book.getBook();
+  bookArray.forEach((book) => {
+    Book.addNewBook(book);
+  });
 });
 
 btn.addEventListener('click', (e) => {

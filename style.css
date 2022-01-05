@@ -1,34 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style-type: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+  --first-color: #fdfffe;
+  --third-color: #5eaaa8;
+  --second-color: #d6f1ef;
+  --second-color2: #c4f0eb75;
+  --last-color: #076776;
 }
 
 body {
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+  background: var(--first-color);
+}
+
+h1 {
+  font-size: 42px;
+  text-align: center;
+  font-weight: 900;
+  color: var(--last-color);
+}
+
+h1 span {
+  color: var(--third-color);
+}
+
+.displayBook {
+  width: 800px;
+  margin: 3.5rem auto;
+  border: 2px solid #6c8d92b6;
 }
 
 .bookItem {
-  margin-bottom: 0.5rem;
-  border-bottom: 1px solid rgb(99, 99, 99);
-  padding: 10px;
-  width: 40%;
+  width: 100%;
+  height: 60px;
+  padding: 10px 2rem;
+}
+
+.bookItem,
+.book-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.bookItem:nth-child(odd) {
+  background-color: var(--second-color);
+}
+
+.bookItem:nth-child(even) {
+  background-color: var(--second-color2);
+}
+
+.book-content {
+  width: 70%;
+  text-align: start;
+}
+
+.book-content li {
+  width: 50%;
+  color: #003138;
+  border-right: 2px solid #6c8d92b6;
+  margin-right: 20px;
+}
+
+#remove {
+  width: 100px;
+  height: 30px;
+  color: var(--last-color);
+  border: none;
+  background-color: var(--first-color);
+  border-radius: 4px;
+}
+
+h2 {
+  color: #003138;
+  text-align: center;
+  font-size: 26px;
+  padding-bottom: 1.5rem;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  width: 200px;
+  justify-content: center;
+  align-items: center;
 }
 
-form input {
-  margin: 0.5rem 0;
-  height: 30px;
-  padding: 5px;
+input {
+  margin: 1.2rem;
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  border: 2px solid #6c8d92b6;
+  outline: none;
 }
 
 #button {
-  width: 60px;
+  width: 180px;
+  height: 40px;
+  border: none;
+  color: var(--first-color);
+  background-color: var(--last-color);
+  font-size: 18px;
+  border-radius: 6px;
 }
