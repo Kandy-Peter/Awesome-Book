@@ -1,10 +1,11 @@
-let bookArray = [];
+// let bookArray = [];
 
 class Book {
-  constructor(id, title, author) {
+  constructor(id, title, author, bookArray = []) {
     this.id = id;
     this.title = title;
     this.author = author;
+    this.bookArray = bookArray;
   }
 
   static lastID(bookArray) {
@@ -48,15 +49,16 @@ const booksContainer = document.querySelector('.displayBook');
 const btn = document.getElementById('button');
 const title = document.getElementById('title');
 const author = document.getElementById('author');
+let newBooks = Book.bookArray;
 
 document.addEventListener('DOMContentLoaded', () => {
   if (localStorage.getItem('bookstore') === null) {
-    bookArray = [];
+    newBooks = [];
   } else {
-    bookArray = JSON.parse(localStorage.getItem('bookstore'));
-    Book.lastID(bookArray);
+    newBooks = JSON.parse(localStorage.getItem('bookstore'));
+    Book.lastID(newBooks);
   }
-  bookArray.forEach((book) => {
+  newBooks.forEach((book) => {
     Book.addNewBook(book);
   });
 });
@@ -66,8 +68,8 @@ btn.addEventListener('click', (e) => {
   if (Book.checkInput([title, author])) {
     Book.id = Math.random().toString(36).slice(2);
     const book = new Book(Book.id, title.value, author.value);
-    bookArray.push(book);
-    localStorage.setItem('bookstore', JSON.stringify(bookArray));
+    newBooks.push(book);
+    localStorage.setItem('bookstore', JSON.stringify(newBooks));
     Book.clearInputs();
     Book.addNewBook(book);
   }
@@ -77,8 +79,8 @@ booksContainer.addEventListener('click', (e) => {
   if (e.target.id === 'remove') {
     const bookItem = e.target.parentElement;
     booksContainer.removeChild(bookItem);
-    const newBookArray = bookArray.filter((event) => event.id !== bookItem.id);
-    bookArray = newBookArray;
-    localStorage.setItem('bookstore', JSON.stringify(bookArray));
+    const newBookArray = newBooks.filter((event) => event.id !== bookItem.id);
+    newBooks = newBookArray;
+    localStorage.setItem('bookstore', JSON.stringify(newBooks));
   }
 });
