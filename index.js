@@ -65,7 +65,6 @@ btn.addEventListener('click', (e) => {
   e.preventDefault();
   if (Book.checkInput([title, author])) {
     Book.id = Math.random().toString(36).slice(2);
-    // const bookArray = [];
     const book = new Book(Book.id, title.value, author.value);
     bookArray.push(book);
     localStorage.setItem('bookstore', JSON.stringify(bookArray));
