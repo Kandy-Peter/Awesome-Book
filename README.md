@@ -3,7 +3,7 @@ Awsome book is a javascript app that stores books locally the way that user can 
 
 This is a screenshot of my capstone
 
-![screenshot](./images/.png) ![screenshot](./images/.png)
+![screenshot](./img/screenshoot.png)
 
 ## Built With
 
@@ -16,7 +16,7 @@ This is a screenshot of my capstone
 clone repo: `git clone https://github.com/Kandy-Peter/Awesome-Book.git`
 
 ### Live
- To see live project go to: [Live_demo]()
+ To see live project go to: [Live_demo](https://kandy-peter.github.io/Awesome-Book/)
 
 ### Install
 

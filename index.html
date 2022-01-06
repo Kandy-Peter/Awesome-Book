@@ -8,18 +8,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Awesome <span>Book</span>Store</h1>
-    <div class="displayBook">
+    <header>
+        <h1>Awesome <span>Book</span>Store</h1>
+        <nav>
+            <ul>
+                <li class="contact-list">List</li>
+                <li class="add-contact">Add Contact</li>
+                <li class="contact-me">Contact</li>
+            </ul>
+        </nav>
+    </header>
+
+    <span class="date"></span>
+
+    <h2>All Awesome Book</h2>
+
+    <div class="displayBook home window">
 
     </div>
 
-    <h2>Add New Book</h2>
-    <form>
+    <form class="contact-form window">
         <input type="text" name="name" id="title" placeholder="book title">
         <input type="text" name="author" id="author" placeholder="author name">
         <button id="button">Add Book</button>
     </form>
+    <section class="abt-me window">
+        <p>For any question or just want to contact me &#128522;<br>
+        You can reach out to me: </p>
+
+        <ul>
+            <li>My mail: <a href="mailto:kandypeter03@gmail.com">kandypeter03@gmail.com</a></li>
+            <li>My number: <a href="tel:+250789944856">+250789944856</a></li>
+            <li>My Linkedin: <a href="https://www.linkedin.com/in/kandi-peter-a49590212/">Kandi-Peter</a></li>
+        </ul>
+    </section>
+
+    <footer>
+       Developed by <a href="https://github.com/Kandy-Peter"> Kandy Peter Kamuntu</a>
+    </footer>
 
     <script src="./index.js"></script>
+    <script src="./nav.js"></script>
 </body>
 </html>
