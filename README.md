@@ -3,7 +3,7 @@ Awsome book is a javascript app that stores books locally the way that user can 
 
 This is a screenshot of my capstone
 
-![screenshot](./images/.png) ![screenshot](./images/.png)
+![screenshot](./img/screenshoot.png)
 
 ## Built With
 
