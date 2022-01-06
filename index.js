@@ -1,5 +1,3 @@
-// let bookArray = [];
-
 class Book {
   constructor() {
     this.bookArray = localStorage.getItem('bookstore') ? JSON.parse(localStorage.getItem('bookstore')) : [];
@@ -45,7 +43,11 @@ btn.addEventListener('click', (e) => {
   e.preventDefault();
   if (title.value !== '' || author.value !== '') {
     const id = Date.now();
-    const book = { id, title: title.value, author: author.value };
+    const book = {
+      id,
+      title: title.value,
+      author: author.value
+    };
     title.value = '';
     author.value = '';
     bookList.addNewBook(book);
@@ -59,4 +61,4 @@ booksContainer.addEventListener('click', (e) => {
     bookList.removeBook(element.id);
     element.remove();
   }
-});
+})
