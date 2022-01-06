@@ -97,6 +97,7 @@ h1 span {
   width: 800px;
   flex: 1;
   display: block;
+  box-shadow: 1px 3px 10px #ecfffe;
 }
 
 .bookItem {
