@@ -16,7 +16,7 @@ This is a screenshot of my capstone
 clone repo: `git clone https://github.com/Kandy-Peter/Awesome-Book.git`
 
 ### Live
- To see live project go to: [Live_demo](https://github.com/Kandy-Peter/Awesome-Book/settings/pages)
+ To see live project go to: [Live_demo](https://kandy-peter.github.io/Awesome-Book/)
 
 ### Install
 
